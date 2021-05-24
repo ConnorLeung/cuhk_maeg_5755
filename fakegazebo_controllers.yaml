@@ -1,0 +1,19 @@
+controller_manager_ns: controller_manager
+controller_list:
+  - name: zzz_arm/fakegazebo_arm_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - shoulder_zhuan_joint
+      - upper_arm_joint
+      - fore_arm_joint
+      - hand_wan_joint
+      - hand_zhuan_joint
+  - name: zzz_arm/fakegazebo_grapper_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - finger_1_joint
+      - finger_2_joint

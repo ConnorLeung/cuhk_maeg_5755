@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<robot>
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/zzz_arm</robotNamespace>
+ 
+      <!--<robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+The arm trajectory will be executed with the default configuration, but the grabbing will fail
+-->
+ 
+      <robotSimType>rosbook_arm_hardware_gazebo/ROSBookArmHardwareGazebo</robotSimType>
+ <!-- After using a custom plug-in in the tutorial, the grab and place execution is successful, the source code is shown below -->
+ 
+      <controlPeriod>0.001</controlPeriod>
+    </plugin>
+  </gazebo>
+</robot>
